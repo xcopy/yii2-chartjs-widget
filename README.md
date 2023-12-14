@@ -9,7 +9,7 @@ ChartJs Widget
 [![Total Downloads](https://poser.pugx.org/2amigos/yii2-chartjs-widget/downloads)](https://packagist.org/packages/2amigos/yii2-chartjs-widget) 
 [![StyleCI](https://styleci.io/repos/16515084/shield?branch=master)](https://styleci.io/repos/16515084)
 
-Renders a [ChartJs plugin](http://www.chartjs.org/docs/) widget
+Renders a [ChartJs plugin](https://www.chartjs.org) widget
 
 Installation
 ------------
@@ -21,15 +21,15 @@ set.
 Either run
 
 ```
-composer require 2amigos/yii2-chartjs-widget:~2.0
+composer require xcopy/yii2-chartjs-widget:dev-master
 ```
 or add
 
-```json
-"2amigos/yii2-chartjs-widget" : "~2.0"
+```
+"xcopy/yii2-chartjs-widget": "dev-master"
 ```
 
-to the require section of your application's `composer.json` file.
+to the `require` section of your application's `composer.json` file.
 
 Usage
 -----
@@ -46,13 +46,13 @@ The following types are supported:
 - Area 
 - Mixed
 
-The following example is using the `Line` type of chart. Please, check [ChartJs plugin](http://www.chartjs.org/docs/) 
+The following example is using the `Line` type of chart. Please, check [ChartJs plugin](https://www.chartjs.org/docs) 
 documentation for the different types supported by the plugin.
 
-```
+```php
 use dosamigos\chartjs\ChartJs;
 
-<?= ChartJs::widget([
+echo ChartJs::widget([
     'type' => 'line',
     'options' => [
         'height' => 400,
@@ -84,10 +84,11 @@ use dosamigos\chartjs\ChartJs;
         ]
     ]
 ]);
-?>
 ```
+
 Plugins usage example (displaying percentages on the Pie Chart):
-```
+
+```php
 echo ChartJs::widget([
     'type' => 'pie',
     'id' => 'structurePie',
@@ -103,17 +104,17 @@ echo ChartJs::widget([
                 'data' => ['35.6', '17.5', '46.9'], // Your dataset
                 'label' => '',
                 'backgroundColor' => [
-                        '#ADC3FF',
-                        '#FF9A9A',
+                    '#ADC3FF',
+                    '#FF9A9A',
                     'rgba(190, 124, 145, 0.8)'
                 ],
                 'borderColor' =>  [
-                        '#fff',
-                        '#fff',
-                        '#fff'
+                    '#fff',
+                    '#fff',
+                    '#fff'
                 ],
                 'borderWidth' => 1,
-                'hoverBorderColor'=>["#999","#999","#999"],                
+                'hoverBorderColor'=>["#999","#999","#999"],
             ]
         ]
     ],
@@ -134,7 +135,6 @@ echo ChartJs::widget([
             'mode' => false
         ],
         'maintainAspectRatio' => false,
-
     ],
     'plugins' =>
         new \yii\web\JsExpression('
@@ -168,14 +168,13 @@ echo ChartJs::widget([
                 });
             }
         }]')
-])
+]);
 ```
-
 
 Further Information
 -------------------
 ChartJs has lots of configuration options. For further information, please check the
-[ChartJs plugin](http://www.chartjs.org/docs/) website.
+[ChartJs plugin](https://www.chartjs.org/docs) website.
 
 Contributing
 ------------
