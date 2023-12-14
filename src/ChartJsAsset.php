@@ -17,12 +17,28 @@ use yii\web\AssetBundle;
  */
 class ChartJsAsset extends AssetBundle
 {
-    public $sourcePath = null;
+    /**
+     * @inheritdoc
+     */
+    public $sourcePath = '@npm/chart.js/dist';
 
+    /**
+     * @inheritdoc
+     */
     public $js = [
-        'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js'
+        'chart.umd.js'
     ];
 
+    /**
+     * @inheritdoc
+     */
+    public $publishOptions = [
+        'only' => ['chart.umd.*']
+    ];
+
+    /**
+     * @inheritdoc
+     */
     public $depends = [
         'yii\web\JqueryAsset',
     ];

@@ -1,5 +1,5 @@
 {
-    "name": "2amigos/yii2-chartjs-widget",
+    "name": "xcopy/yii2-chartjs-widget",
     "description": "ChartJs widget for Yii2.",
     "type": "yii2-extension",
     "keywords": [
@@ -22,15 +22,15 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/2amigos/yii2-chartjs-widget/issues",
-        "source": "https://github.com/2amigos/yii2-chartjs-widget"
+        "issues": "https://github.com/xcopy/yii2-chartjs-widget/issues",
+        "source": "https://github.com/xcopy/yii2-chartjs-widget"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
         "php": ">=7.3",
-        "yiisoft/yii2": "^2.0",
-        "nnnick/chartjs": "^2.9"
+        "yiisoft/yii2": "~2.0.14",
+        "npm-asset/chart.js": "^4.4"
     },
     "require-dev": {
         "roave/security-advisories": "dev-master",
